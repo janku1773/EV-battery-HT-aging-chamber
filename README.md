@@ -2,10 +2,12 @@
 
 Temperature monitoring, deviation analysis, and quality risk prevention for high-temperature battery aging chambers.
 
+Parameters = Date, Time, Humidity, Temperature
+
 max_temp = 63 deg Celsius
 min_temp = 57 deg Celsius
 
-target = 60
+target = 60 C
 
 Active 50 sensors to control room.
 

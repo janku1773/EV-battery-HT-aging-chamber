@@ -1,5 +1,6 @@
-🔋 EV Battery Gigafactory: Thermal Stability & Aging Monitor📋 
-Project Overview
+🔋 EV Battery Gigafactory: Thermal Stability & Aging Monitor
+
+📋 Project Overview
 
 This repository contains the monitoring logic and deviation analysis framework for High-Temperature Battery Aging Chambers.
 

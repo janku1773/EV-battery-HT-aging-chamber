@@ -25,22 +25,18 @@ Total Process Time 48 Hours (Continuous)
 - 🌍 Environmental Factors: Significant external weather changes impacting the building's thermal envelope.
 
 🔄 Workflow Logic: MES & ASRS Integration
-The process is fully automated to ensure "Dark Factory" consistency:
-1- Chamber Assignment: MES checks availability for Room 01 or Room 02.
-2- In-Feeding: ASRS transfers the battery racks into the designated chamber.
-3- Soaking Phase: The 48-hour timer begins only when the Stability Buffer ($57°C \le T \le 63°C$) is reached by all 50 sensors.
-4- Continuous Validation: Real-time analysis of sensor data to detect spikes or drops.
-5- Out-Feeding: ASRS extracts the batch once the 48-hour chemical activation is verified.
 
-Kod snippet'igraph LR
-    A[ASRS Loading] --> B{Temp > 57°C?}
-    B -- No --> C[Pre-Heating]
-    C --> B
-    B -- Yes --> D[48h Timer Start]
-    D --> E{Deviation?}
-    E -- No --> F[Cycle Complete]
-    E -- Yes --> G[Trigger MES Alarm]
-    F --> H[ASRS Extraction]
+The process is fully automated to ensure "Dark Factory" consistency:
+
+1- Chamber Assignment: MES checks availability for Room 01 or Room 02.
+
+2- In-Feeding: ASRS transfers the battery racks into the designated chamber.
+
+3- Soaking Phase: The 48-hour timer begins only when the Stability Buffer ($57°C \le T \le 63°C$) is reached by all 50 sensors.
+
+4- Continuous Validation: Real-time analysis of sensor data to detect spikes or drops.
+
+5- Out-Feeding: ASRS extracts the batch once the 48-hour chemical activation is verified.
     
 🔥 Safety & Fire Prevention ProtocolsBecause high-temperature aging involves batteries at high energy density, safety is the highest priority.
 - Detection: High-sensitivity smoke and thermal runaway detection is Activated.
@@ -83,7 +79,7 @@ def validate_aging_batch(data_file):
 - Analysis: Run main.py to generate the stability report.
 - Audit: Review the generated Deviation_Report.pdf for any quality risk prevention steps.
 
-## 🔬 Chemical Quality Validation
+🔬 Chemical Quality Validation
 The aging process follows a precise sequence to ensure optimal SEI layer formation and electrolyte stabilization.
 
 ### Thermal Constraints:
